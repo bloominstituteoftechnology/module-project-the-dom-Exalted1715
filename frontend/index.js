@@ -6,10 +6,15 @@ function moduleProject1() {
   // 👇 WORK WORK BELOW THIS LINE 👇
 
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
-  //  ✨ add your code here
+    const allWidgets = document.querySelectorAll('section>div')
+    allWidgets.forEach((widget)=>{
+      widget.classList.add('widget')
+    }) 
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
-  //  ✨ add your code here
+   const quoteWidget = document.createElement('h')
+      quoteWidget.classList.add('widget')
+      quoteWidget.textContent = "Quote of the Day"
 
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
