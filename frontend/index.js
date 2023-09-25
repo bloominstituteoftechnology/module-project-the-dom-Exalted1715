@@ -12,14 +12,37 @@ function moduleProject1() {
     }) 
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
-   const quoteWidget = document.createElement('h')
-      quoteWidget.classList.add('widget')
-      quoteWidget.textContent = "Quote of the Day"
+   const randomIdx = Math.floor(Math.random() * quotes.length)
+   const randomQuote = quotes[randomIdx]
+   console.log(randomQuote)
+   const quote = document.createElement('div')
+   const quoteText = randomQuote.quote
+   quote.textContent = quoteText
+   const widget1 = document.querySelector('.quoteoftheday')
+   widget1.appendChild(quote)
+
+   const authordate = document.createElement('div')
+   const {author, date} = randomQuote
+   authordate.textContent = `${author} in ${date || "an unknown date"}`
+   widget1.appendChild(authordate)
 
   // 👉 TASK 3 - Build a "Corporate Speak" widget
-  //  ✨ add your code here
+  const randomVerb1 = verbs[Math.floor(Math.random()* verbs.length)]
+  const randomVerb2 = verbs[Math.floor(Math.random()* verbs.length)]
 
-  // 👉 TASK 4 - Build a "Countdown" widget
+  const randomAdverbs1 = adverbs[Math.floor(Math.random()* adverbs.length)]
+  const randomadverbs2 = adverbs[Math.floor(Math.random()* adverbs.length)]
+
+  const randomNoun1 = nouns[Math.floor(Math.random()* nouns.length)]
+  const randomNoun2 = nouns[Math.floor(Math.random()* nouns.length)]
+
+  document.querySelector('.corporateSpeak')
+    const mumboJumbo = `We need to ${randomVerb1} our ${randomNoun1} ${randomAdverbs1} in order to ${randomVerb2} our ${randomNoun2} ${randomadverbs2}.`
+    const paragraph = document.createElement('p')
+    paragraph.textContent = mumboJumbo
+    document.querySelector('.corporatespeak').appendChild(paragraph)
+  
+    // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
 
   // 👉 TASK 5 - Build a "Friends" widget
