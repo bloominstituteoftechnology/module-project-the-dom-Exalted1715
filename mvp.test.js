@@ -67,7 +67,7 @@ describe('Sprint 5 Module', () => {
       })
     })
   })
-  describe.only('Task 3 - Corporate Speak', () => {
+  describe('Task 3 - Corporate Speak', () => {
     beforeAll(() => {
       jest.spyOn(global.Math, 'random').mockReturnValue(0.9)
     })
